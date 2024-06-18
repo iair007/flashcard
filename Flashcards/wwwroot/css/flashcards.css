@@ -2,24 +2,52 @@
     cursor: pointer;
 }
 
+.flip-container {
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+}
+
 .card-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
     transition: transform 0.6s;
-    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
     cursor: pointer;
 }
 
-    .card-body.flip .card-text {
+    .card-body.back {
         transform: rotateY(180deg);
-        backface-visibility: hidden;
     }
 
-    .card-body.front .card-text {
-        transform: rotateY(0deg);
-        backface-visibility: hidden;
-    }
+.flip .card-body.front {
+    transform: rotateY(180deg);
+}
 
-    .card-body.back .card-text {
-        transform: rotateY(180deg);
-        backface-visibility: hidden;
-        display: none;
-    }
+.flip .card-body.back {
+    transform: rotateY(0deg);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.indicator {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}

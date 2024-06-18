@@ -37,13 +37,17 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="card" style="width: 100%;" onclick="flipCard()">
-                    <div class="card-body">
+                <div class="card" onclick="flipCard()">
+                    <div class="card-body front">
                         <p class="card-text" id="flashcardContent"></p>
+                    </div>
+                    <div class="card-body back">
+                        <p class="card-text" id="flashcardContentBack"></p>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
+                <div class="indicator" id="flashcardIndicator">Question</div>
                 <button type="button" class="btn btn-primary" onclick="nextFlashcard()">Next Flashcard</button>
             </div>
         </div>

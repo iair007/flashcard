@@ -21,15 +21,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const flashcard = flashcards[currentFlashcardIndex];
         document.getElementById('flashcardModalLabel').innerText = flashcard.Category;
         document.getElementById('flashcardContent').innerText = flashcard.Question;
+        document.getElementById('flashcardContentBack').innerText = flashcard.Answer;
+        document.getElementById('flashcardIndicator').innerText = "Question";
         showingQuestion = true;
+        document.querySelector('.card').classList.remove('flip');
     };
 
     window.flipCard = function () {
-        const flashcard = flashcards[currentFlashcardIndex];
+        document.querySelector('.card').classList.toggle('flip');
         if (showingQuestion) {
-            document.getElementById('flashcardContent').innerText = flashcard.Answer;
+            document.getElementById('flashcardIndicator').innerText = "Answer";
         } else {
-            document.getElementById('flashcardContent').innerText = flashcard.Question;
+            document.getElementById('flashcardIndicator').innerText = "Question";
         }
         showingQuestion = !showingQuestion;
     };
