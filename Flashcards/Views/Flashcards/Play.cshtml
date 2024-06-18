@@ -1,0 +1,29 @@
+﻿@model FlashcardsApp.Models.Flashcard
+
+@{
+    ViewData["Title"] = "Play";
+}
+
+<h2>Flashcard Game</h2>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Category: @Model.Category</h5>
+        <h5 class="card-title">Question</h5>
+        <p class="card-text">@Model.Question</p>
+        <a href="#" class="btn btn-primary" onclick="showAnswer()">Show Answer</a>
+    </div>
+</div>
+
+<div class="card mt-3" id="answerCard" style="display:none; width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Answer</h5>
+        <p class="card-text">@Model.Answer</p>
+    </div>
+</div>
+
+<script>
+    function showAnswer() {
+        document.getElementById('answerCard').style.display = 'block';
+    }
+</script>

@@ -1,0 +1,87 @@
+﻿@model List<FlashcardsApp.Models.Flashcard>
+
+@{
+    ViewData["Title"] = "Flashcards";
+}
+
+<h2>Flashcards</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Question</th>
+            <th>Answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var flashcard in Model)
+        {
+            <tr>
+                <td>@flashcard.Category</td>
+                <td>@flashcard.Question</td>
+                <td>@flashcard.Answer</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button class="btn btn-primary" onclick="startGame()">Start Game</button>
+
+<!-- Modal -->
+<div class="modal fade" id="flashcardModal" tabindex="-1" role="dialog" aria-labelledby="flashcardModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="flashcardModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="card" style="width: 100%;" onclick="flipCard()">
+                    <div class="card-body">
+                        <p class="card-text" id="flashcardContent"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="nextFlashcard()">Next Flashcard</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let flashcards = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model));
+    let currentFlashcardIndex = 0;
+    let showingQuestion = true;
+
+    function startGame() {
+        currentFlashcardIndex = 0;
+        showFlashcard();
+        $('#flashcardModal').modal('show');
+    }
+
+    function showFlashcard() {
+        const flashcard = flashcards[currentFlashcardIndex];
+        document.getElementById('flashcardModalLabel').innerText = flashcard.Category;
+        document.getElementById('flashcardContent').innerText = flashcard.Question;
+        showingQuestion = true;
+    }
+
+    function flipCard() {
+        const flashcard = flashcards[currentFlashcardIndex];
+        if (showingQuestion) {
+            document.getElementById('flashcardContent').innerText = flashcard.Answer;
+        } else {
+            document.getElementById('flashcardContent').innerText = flashcard.Question;
+        }
+        showingQuestion = !showingQuestion;
+    }
+
+    function nextFlashcard() {
+        currentFlashcardIndex = (currentFlashcardIndex + 1) % flashcards.length;
+        showFlashcard();
+    }
+</script>
