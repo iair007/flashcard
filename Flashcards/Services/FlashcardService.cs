@@ -1,35 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using FlashcardsApp.Models;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.IO;
-using FlashcardsApp.Models;
-using Microsoft.AspNetCore.Hosting;
+using System.Linq;
 
 namespace FlashcardsApp.Services
 {
     public class FlashcardService
     {
-        private readonly string _csvFilePath;
+        private readonly string _jsonFilePath;
 
-        public FlashcardService(IWebHostEnvironment webHostEnvironment)
+        public FlashcardService()
         {
-            _csvFilePath = Path.Combine(webHostEnvironment.WebRootPath, "flashcards.csv");
+            _jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/data/flashcards.json");
         }
 
         public List<Flashcard> GetFlashcards()
         {
-            var flashcards = new List<Flashcard>();
-
-            var lines = File.ReadAllLines(_csvFilePath);
-            foreach (var line in lines)
-            {
-                var parts = line.Split(',');
-                flashcards.Add(new Flashcard
-                {
-                    Category = parts[0],
-                    Question = parts[1],
-                    Answer = parts[2]
-                });
-            }
-
+            var jsonData = File.ReadAllText(_jsonFilePath);
+            var flashcards = JsonConvert.DeserializeObject<List<Flashcard>>(jsonData);
             return flashcards;
         }
     }

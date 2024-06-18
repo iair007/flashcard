@@ -18,7 +18,7 @@
         {
             <tr class="flashcard-row" data-index="@i">
                 <td>@Model[i].Category</td>
-                <td>@Model[i].Question</td>
+                <td>@Html.Raw(Model[i].Question.Replace("\n", "<br>"))</td>
             </tr>
         }
     </tbody>
@@ -37,7 +37,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="card" onclick="flipCard()">
+                <div class="card" onclick="flipCard(event)">
                     <div class="card-body front">
                         <p class="card-text" id="flashcardContent"></p>
                     </div>

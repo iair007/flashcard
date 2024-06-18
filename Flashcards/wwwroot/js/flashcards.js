@@ -20,14 +20,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     window.showFlashcard = function () {
         const flashcard = flashcards[currentFlashcardIndex];
         document.getElementById('flashcardModalLabel').innerText = flashcard.Category;
-        document.getElementById('flashcardContent').innerText = flashcard.Question;
-        document.getElementById('flashcardContentBack').innerText = flashcard.Answer;
+        document.getElementById('flashcardContent').innerHTML = flashcard.Question.replace(/\n/g, '<br>');
+        document.getElementById('flashcardContentBack').innerHTML = flashcard.Answer.replace(/\n/g, '<br>');
         document.getElementById('flashcardIndicator').innerText = "Question";
         showingQuestion = true;
         document.querySelector('.card').classList.remove('flip');
     };
 
-    window.flipCard = function () {
+    window.flipCard = function (event) {
+        if (event.target.tagName.toLowerCase() === 'a') {
+            return;
+        }
         document.querySelector('.card').classList.toggle('flip');
         if (showingQuestion) {
             document.getElementById('flashcardIndicator').innerText = "Answer";

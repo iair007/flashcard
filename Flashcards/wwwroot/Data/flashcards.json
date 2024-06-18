@@ -1,0 +1,12 @@
+[
+    {
+        "category": "Math",
+        "question": "What is 2+2?\nThis is a simple math question.",
+        "answer": "4\nCorrect answer for the simple math question."
+    },
+    {
+        "category": "Science",
+        "question": "What is the chemical symbol for water?\nYou can find more information <a href='https://en.wikipedia.org/wiki/Water' target='_blank'>here</a>.",
+        "answer": "H2O\nWater is made of two hydrogen atoms and one oxygen atom."
+    }
+]
