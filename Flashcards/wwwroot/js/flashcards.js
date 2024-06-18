@@ -38,4 +38,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         currentFlashcardIndex = (currentFlashcardIndex + 1) % flashcards.length;
         showFlashcard();
     };
+
+    // Ensure the close button works
+    document.querySelector('.modal .close').addEventListener('click', function () {
+        $('#flashcardModal').modal('hide');
+    });
 });
