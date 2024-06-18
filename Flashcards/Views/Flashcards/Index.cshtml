@@ -6,25 +6,27 @@
 
 <h2>Flashcards</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Category</th>
-            <th>Question</th>
-        </tr>
-    </thead>
-    <tbody>
-        @for (var i = 0; i < Model.Count; i++)
-        {
-            <tr class="flashcard-row" data-index="@i">
-                <td>@Model[i].Id</td>
-                <td>@Model[i].Category</td>
-                <td>@Html.Raw(Model[i].Question.Replace("\n", "<br>"))</td>
+<div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Category</th>
+                <th>Question</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @for (var i = 0; i < Model.Count; i++)
+            {
+                <tr class="flashcard-row" data-index="@i">
+                    <td>@Model[i].Id</td>
+                    <td>@Model[i].Category</td>
+                    <td>@Html.Raw(Model[i].Question.Replace("\n", "<br>"))</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 <button class="btn btn-primary" onclick="startGame()">Start Game</button>
 
@@ -40,7 +42,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="card" onclick="flipCard(event)">
+                <div class="card flip-container" onclick="flipCard(event)">
                     <div class="card-body front">
                         <p class="card-text" id="flashcardContent"></p>
                     </div>
@@ -60,9 +62,3 @@
 <script id="flashcards-data" type="application/json">
     @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model))
 </script>
-
-<!-- Link to the external CSS file -->
-<link href="~/css/flashcards.css" rel="stylesheet">
-
-<!-- Include the external JavaScript file -->
-<script src="~/js/flashcards.js"></script>

@@ -2,23 +2,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let flashcards = JSON.parse(document.getElementById('flashcards-data').textContent);
     let currentFlashcardIndex = 0;
     let showingQuestion = true;
+    let randomFlashcards = [...flashcards];
 
-    document.querySelectorAll('.flashcard-row').forEach(row => {
-        row.addEventListener('click', function () {
-            currentFlashcardIndex = this.dataset.index;
-            showFlashcard();
-            $('#flashcardModal').modal('show');
-        });
-    });
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
 
     window.startGame = function () {
+        shuffle(randomFlashcards);
         currentFlashcardIndex = 0;
         showFlashcard();
         $('#flashcardModal').modal('show');
     };
 
     window.showFlashcard = function () {
-        const flashcard = flashcards[currentFlashcardIndex];
+        const flashcard = randomFlashcards[currentFlashcardIndex];
         document.getElementById('flashcardModalLabel').innerText = flashcard.Id + '-' + flashcard.Category;
         document.getElementById('flashcardContent').innerHTML = flashcard.Question.replace(/\n/g, '<br>');
         document.getElementById('flashcardContentBack').innerHTML = flashcard.Answer.replace(/\n/g, '<br>');
@@ -41,12 +42,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
     };
 
     window.nextFlashcard = function () {
-        currentFlashcardIndex = (currentFlashcardIndex + 1) % flashcards.length;
+        currentFlashcardIndex = (currentFlashcardIndex + 1) % randomFlashcards.length;
         showFlashcard();
     };
 
     // Ensure the close button works
     document.querySelector('.modal .close').addEventListener('click', function () {
         $('#flashcardModal').modal('hide');
+    });
+
+    // Event listener for table rows
+    document.querySelectorAll('.flashcard-row').forEach(row => {
+        row.addEventListener('click', function () {
+            currentFlashcardIndex = this.dataset.index;
+            showFlashcard();
+            $('#flashcardModal').modal('show');
+        });
     });
 });
