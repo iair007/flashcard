@@ -15,12 +15,12 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var flashcard in Model)
+        @for (var i = 0; i < Model.Count; i++)
         {
-            <tr>
-                <td>@flashcard.Category</td>
-                <td>@flashcard.Question</td>
-                <td>@flashcard.Answer</td>
+            <tr class="flashcard-row" data-index="@i">
+                <td>@Model[i].Category</td>
+                <td>@Model[i].Question</td>
+                <td>@Model[i].Answer</td>
             </tr>
         }
     </tbody>
@@ -52,36 +52,13 @@
     </div>
 </div>
 
-<script>
-    let flashcards = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model));
-    let currentFlashcardIndex = 0;
-    let showingQuestion = true;
-
-    function startGame() {
-        currentFlashcardIndex = 0;
-        showFlashcard();
-        $('#flashcardModal').modal('show');
-    }
-
-    function showFlashcard() {
-        const flashcard = flashcards[currentFlashcardIndex];
-        document.getElementById('flashcardModalLabel').innerText = flashcard.Category;
-        document.getElementById('flashcardContent').innerText = flashcard.Question;
-        showingQuestion = true;
-    }
-
-    function flipCard() {
-        const flashcard = flashcards[currentFlashcardIndex];
-        if (showingQuestion) {
-            document.getElementById('flashcardContent').innerText = flashcard.Answer;
-        } else {
-            document.getElementById('flashcardContent').innerText = flashcard.Question;
-        }
-        showingQuestion = !showingQuestion;
-    }
-
-    function nextFlashcard() {
-        currentFlashcardIndex = (currentFlashcardIndex + 1) % flashcards.length;
-        showFlashcard();
-    }
+<!-- Include flashcards data as JSON -->
+<script id="flashcards-data" type="application/json">
+    @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model))
 </script>
+
+<!-- Link to the external CSS file -->
+<link href="~/css/flashcards.css" rel="stylesheet">
+
+<!-- Include the external JavaScript file -->
+<script src="~/js/flashcards.js"></script>

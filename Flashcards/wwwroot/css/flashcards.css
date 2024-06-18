@@ -1,0 +1,25 @@
+﻿.flashcard-row {
+    cursor: pointer;
+}
+
+.card-body {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+    .card-body.flip .card-text {
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+    }
+
+    .card-body.front .card-text {
+        transform: rotateY(0deg);
+        backface-visibility: hidden;
+    }
+
+    .card-body.back .card-text {
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        display: none;
+    }
