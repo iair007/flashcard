@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById('flashcardModalLabel').innerText = flashcard.Category;
         document.getElementById('flashcardContent').innerHTML = flashcard.Question.replace(/\n/g, '<br>');
         document.getElementById('flashcardContentBack').innerHTML = flashcard.Answer.replace(/\n/g, '<br>');
-        document.getElementById('flashcardIndicator').innerText = "Question";
+        document.getElementById('watermark').innerText = "Question";
         showingQuestion = true;
         document.querySelector('.card').classList.remove('flip');
     };
@@ -33,9 +33,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
         document.querySelector('.card').classList.toggle('flip');
         if (showingQuestion) {
-            document.getElementById('flashcardIndicator').innerText = "Answer";
+            document.getElementById('watermark').innerText = "Answer";
         } else {
-            document.getElementById('flashcardIndicator').innerText = "Question";
+            document.getElementById('watermark').innerText = "Question";
         }
         showingQuestion = !showingQuestion;
     };
