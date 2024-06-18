@@ -1,12 +1,602 @@
 [
     {
-        "category": "Math",
-        "question": "What is 2+2?\nThis is a simple math question.",
-        "answer": "4\nCorrect answer for the simple math question."
+        "id": 1,
+        "category": "C#",
+        "question": "What is C#?\nExplain its key features.",
+        "answer": "C# is a modern, object-oriented programming language developed by Microsoft. Key features include simplicity, modernity, type safety, versioning, scalability, and rich library support. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/' target='_blank'>Learn more</a>"
     },
     {
-        "category": "Science",
-        "question": "What is the chemical symbol for water?\nYou can find more information <a href='https://en.wikipedia.org/wiki/Water' target='_blank'>here</a>.",
-        "answer": "H2O\nWater is made of two hydrogen atoms and one oxygen atom."
+        "id": 2,
+        "category": "C#, .NET",
+        "question": "What is the Common Language Runtime (CLR)?",
+        "answer": "The CLR is the execution engine for .NET applications. It provides services such as memory management, security, and exception handling. <a href='https://docs.microsoft.com/en-us/dotnet/standard/clr' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 3,
+        "category": "C#",
+        "question": "What is a namespace in C#?\nWhy is it important?",
+        "answer": "A namespace is a way to organize code and prevent naming conflicts. It helps group related classes, interfaces, and other types. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/namespaces/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 4,
+        "category": "C#",
+        "question": "What are the different types of comments in C#?",
+        "answer": "C# supports single-line comments (//), multi-line comments (/* */), and XML documentation comments (///)."
+    },
+    {
+        "id": 5,
+        "category": "C#, Object Oriented",
+        "question": "What is the difference between a class and an object?",
+        "answer": "A class is a blueprint for creating objects. An object is an instance of a class, containing data and behavior defined by the class. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 6,
+        "category": "C#, Object Oriented",
+        "question": "What is inheritance in C#?\nHow does it work?",
+        "answer": "Inheritance allows a class to inherit members (fields, methods, etc.) from another class. It promotes code reuse and establishes a hierarchical relationship between classes. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/inheritance' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 7,
+        "category": "C#, Object Oriented",
+        "question": "What is polymorphism in C#?\nGive an example.",
+        "answer": "Polymorphism allows methods to have different implementations based on the object that is calling them. Example: Method overriding in derived classes. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/polymorphism' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 8,
+        "category": "C#, Object Oriented",
+        "question": "What is encapsulation in C#?\nWhy is it important?",
+        "answer": "Encapsulation is the bundling of data and methods that operate on that data within a single unit (class). It restricts direct access to some components, which helps in maintaining the integrity of the data. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/encapsulation' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 9,
+        "category": "C#",
+        "question": "What are properties in C#?\nHow do they work?",
+        "answer": "Properties are members that provide a flexible mechanism to read, write, or compute the values of private fields. They use accessors (get and set). <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 10,
+        "category": "C#",
+        "question": "What is the difference between a struct and a class in C#?",
+        "answer": "Structs are value types and are usually used for small data structures. Classes are reference types and are used for complex data structures. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/structs' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 11,
+        "category": "C#, Object Oriented",
+        "question": "What is an interface in C#?\nHow is it used?",
+        "answer": "An interface defines a contract that classes can implement. It specifies what methods and properties a class must implement but does not provide the implementation itself. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 12,
+        "category": "C#, Object Oriented",
+        "question": "What is an abstract class in C#?\nHow does it differ from an interface?",
+        "answer": "An abstract class cannot be instantiated and may contain abstract methods with no implementation. Unlike interfaces, abstract classes can provide some implementation and can include fields and constructors. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 13,
+        "category": "C#",
+        "question": "What are delegates in C#?\nProvide an example.",
+        "answer": "Delegates are type-safe pointers to methods. They can be used to pass methods as arguments to other methods. Example: Event handling in C#. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 14,
+        "category": "C#",
+        "question": "What are events in C#?\nHow do they work?",
+        "answer": "Events are a way for a class to provide notifications to clients of that class when some interesting thing happens. They are based on delegates. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/events/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 15,
+        "category": "C#",
+        "question": "What is exception handling in C#?\nExplain try-catch-finally.",
+        "answer": "Exception handling in C# is used to handle runtime errors. The try block contains the code that may throw an exception, the catch block contains the code to handle the exception, and the finally block contains the code that is executed regardless of whether an exception was thrown. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/exceptions/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 16,
+        "category": "C#",
+        "question": "What is LINQ in C#?\nProvide an example.",
+        "answer": "LINQ (Language Integrated Query) is a feature that adds query capabilities to .NET languages. Example: var result = from s in students where s.Age > 18 select s; <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/linq/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 17,
+        "category": "C#, .NET",
+        "question": "What is async and await in C#?\nHow are they used?",
+        "answer": "The async and await keywords are used for asynchronous programming. The async keyword is used to declare a method as asynchronous, and the await keyword is used to wait for an asynchronous operation to complete. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 18,
+        "category": "C#",
+        "question": "What is the difference between value types and reference types in C#?",
+        "answer": "Value types are stored on the stack and contain the actual data. Reference types are stored on the heap and contain a reference to the data. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/value-types' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 19,
+        "category": "C#",
+        "question": "What are generics in C#?\nProvide an example.",
+        "answer": "Generics allow you to define type-safe data structures without committing to actual data types. Example: List<T> is a generic collection. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 20,
+        "category": "C#",
+        "question": "What is the purpose of the 'using' statement in C#?\nGive an example.",
+        "answer": "The 'using' statement is used to ensure that IDisposable objects are disposed of properly. Example: using (var stream = new FileStream(\"file.txt\", FileMode.Open)) { /* use stream */ } <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 21,
+        "category": "C#",
+        "question": "What is a nullable type in C#?\nHow is it used?",
+        "answer": "Nullable types are value types that can also represent a null value. They are declared using the ? syntax. Example: int? nullableInt = null; <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 22,
+        "category": "C#",
+        "question": "What is the difference between the '==' operator and the 'Equals' method in C#?",
+        "answer": "The '==' operator is used for reference equality for reference types and value equality for value types. The 'Equals' method can be overridden to provide custom equality comparison. <a href='https://docs.microsoft.com/en-us/dotnet/api/system.object.equals' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 23,
+        "category": "C#",
+        "question": "What is the difference between 'const' and 'readonly' in C#?",
+        "answer": "'const' is a compile-time constant and its value cannot be changed. 'readonly' is a runtime constant and its value can only be set in the constructor. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constants' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 24,
+        "category": "C#",
+        "question": "What is method overloading in C#?\nProvide an example.",
+        "answer": "Method overloading allows multiple methods with the same name but different signatures. Example: void Print(int i) and void Print(string s) <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 25,
+        "category": "C#, Object Oriented",
+        "question": "What is method overriding in C#?\nProvide an example.",
+        "answer": "Method overriding allows a derived class to provide a specific implementation of a method already defined in its base class. Example: class Base { public virtual void Show() {} } class Derived : Base { public override void Show() {} } <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/inheritance' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 26,
+        "category": "C#, Object Oriented",
+        "question": "What is the 'base' keyword in C#?\nHow is it used?",
+        "answer": "The 'base' keyword is used to access members of the base class from within a derived class. Example: base.MethodName() <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/inheritance' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 27,
+        "category": "C#",
+        "question": "What is the 'this' keyword in C#?\nHow is it used?",
+        "answer": "The 'this' keyword refers to the current instance of the class. It is used to access members of the current instance. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-this' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 28,
+        "category": "C#, .NET",
+        "question": "What is reflection in C#?\nHow is it used?",
+        "answer": "Reflection allows you to obtain information about assemblies, modules, and types at runtime. It is used for dynamic type discovery and invocation. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 29,
+        "category": "C#",
+        "question": "What is the difference between 'ref' and 'out' parameters in C#?",
+        "answer": "'ref' parameters require that the variable be initialized before passing. 'out' parameters do not require initialization before passing, but must be assigned a value before the method returns. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 30,
+        "category": "C#",
+        "question": "What is a lambda expression in C#?\nHow is it used?",
+        "answer": "A lambda expression is an anonymous function that you can use to create delegates or expression tree types. It is used for concise syntax for defining methods. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 31,
+        "category": "C#, Object Oriented",
+        "question": "What is the SOLID principle in object-oriented programming?",
+        "answer": "SOLID is a set of five principles to make software designs more understandable, flexible, and maintainable: Single Responsibility Principle, Open/Closed Principle, Liskov Substitution Principle, Interface Segregation Principle, and Dependency Inversion Principle. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/solid' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 32,
+        "category": "C#, .NET",
+        "question": "What is the .NET framework?",
+        "answer": ".NET is a software framework developed by Microsoft that runs primarily on Microsoft Windows. It includes a large class library known as the Framework Class Library (FCL) and provides language interoperability across several programming languages. <a href='https://docs.microsoft.com/en-us/dotnet/framework/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 33,
+        "category": "C#, .NET",
+        "question": "What is the difference between .NET Core and .NET Framework?",
+        "answer": ".NET Framework is the original implementation of .NET, while .NET Core is a cross-platform, open-source, and modular .NET implementation. .NET Core is used for cloud applications, while .NET Framework is used for Windows applications. <a href='https://docs.microsoft.com/en-us/dotnet/core/dotnet-five' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 34,
+        "category": "C#, Object Oriented",
+        "question": "What is the difference between abstract classes and interfaces in C#?",
+        "answer": "Abstract classes can have implementations for some of its members, but interfaces cannot. Interfaces only define the signature of members, and implementing classes must provide the functionality. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/interfaces' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 35,
+        "category": "C#",
+        "question": "What is the difference between a 'for' loop and a 'foreach' loop in C#?",
+        "answer": "'for' loops are used when you know the number of iterations in advance. 'foreach' loops are used to iterate over collections or arrays without needing to know the number of elements. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/using-foreach-with-arrays' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 36,
+        "category": "C#, .NET",
+        "question": "What is garbage collection in .NET?",
+        "answer": "Garbage collection is an automatic memory management feature that reclaims memory occupied by objects that are no longer in use. <a href='https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 37,
+        "category": "C#",
+        "question": "What are extension methods in C#?\nProvide an example.",
+        "answer": "Extension methods allow you to add methods to existing types without modifying their source code. Example: public static class StringExtensions { public static bool IsNullOrEmpty(this string str) { return string.IsNullOrEmpty(str); } } <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 38,
+        "category": "C#, .NET",
+        "question": "What is the purpose of the Global Assembly Cache (GAC)?",
+        "answer": "The Global Assembly Cache (GAC) is a machine-wide code cache for the Common Language Infrastructure (CLI). It is used to store assemblies that are intended to be shared by several applications on the computer. <a href='https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 39,
+        "category": "C#",
+        "question": "What is the difference between an array and a list in C#?",
+        "answer": "Arrays have a fixed size and can hold elements of the same type. Lists are dynamic and can grow or shrink in size and provide more functionality than arrays. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 40,
+        "category": "C#, .NET",
+        "question": "What are the different types of assemblies in .NET?",
+        "answer": "There are two types of assemblies: private assemblies and shared assemblies. Private assemblies are used by a single application, while shared assemblies are intended to be shared by multiple applications. <a href='https://docs.microsoft.com/en-us/dotnet/standard/assembly/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 41,
+        "category": "C#",
+        "question": "What is the difference between 'throw' and 'throw ex' in C#?",
+        "answer": "'throw' is used to rethrow the current exception while preserving the original stack trace. 'throw ex' is used to throw a new exception, which resets the stack trace. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/throw' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 42,
+        "category": "C#, .NET",
+        "question": "What is the .NET Standard?",
+        "answer": ".NET Standard is a formal specification of .NET APIs that are intended to be available on all .NET implementations. It allows libraries to be used across different .NET implementations. <a href='https://docs.microsoft.com/en-us/dotnet/standard/net-standard' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 43,
+        "category": "C#, .NET",
+        "question": "What is an assembly in .NET?",
+        "answer": "An assembly is a compiled code library used by .NET applications. It can contain one or more namespaces, types, and resources. <a href='https://docs.microsoft.com/en-us/dotnet/standard/assembly/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 44,
+        "category": "C#, Object Oriented",
+        "question": "What is the Open/Closed Principle?",
+        "answer": "The Open/Closed Principle states that software entities should be open for extension but closed for modification. This means that the behavior of a module can be extended without modifying its source code. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/solid' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 45,
+        "category": "C#, Object Oriented",
+        "question": "What is the Single Responsibility Principle?",
+        "answer": "The Single Responsibility Principle states that a class should have only one reason to change, meaning it should have only one job or responsibility. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/solid' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 46,
+        "category": "C#, Object Oriented",
+        "question": "What is the Liskov Substitution Principle?",
+        "answer": "The Liskov Substitution Principle states that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/solid' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 47,
+        "category": "C#, Object Oriented",
+        "question": "What is the Interface Segregation Principle?",
+        "answer": "The Interface Segregation Principle states that no client should be forced to depend on methods it does not use. This means that interfaces should be specific to clients and not contain unnecessary methods. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/solid' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 48,
+        "category": "C#, Object Oriented",
+        "question": "What is the Dependency Inversion Principle?",
+        "answer": "The Dependency Inversion Principle states that high-level modules should not depend on low-level modules, but both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/solid' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 49,
+        "category": "C#, .NET",
+        "question": "What is the difference between managed and unmanaged code?",
+        "answer": "Managed code is executed by the CLR and benefits from features such as garbage collection, exception handling, and type safety. Unmanaged code is executed directly by the operating system and does not have these benefits. <a href='https://docs.microsoft.com/en-us/dotnet/standard/managed-code' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 50,
+        "category": "C#",
+        "question": "What is a collection in C#?\nName some types of collections.",
+        "answer": "A collection is a class used to group related objects. Some types of collections in C# are arrays, lists, dictionaries, queues, and stacks. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/collections' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 51,
+        "category": "C#",
+        "question": "What is a tuple in C#?\nHow is it used?",
+        "answer": "A tuple is a data structure that can hold multiple values of different types. It is used to return multiple values from a method. Example: (int, string) myTuple = (1, \"hello\"); <a href='https://docs.microsoft.com/en-us/dotnet/csharp/tuples' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 52,
+        "category": "C#, .NET",
+        "question": "What is ASP.NET?",
+        "answer": "ASP.NET is a web framework for building modern web apps and services with .NET. It allows you to build dynamic websites using C# and the .NET framework. <a href='https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-5.0' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 53,
+        "category": "C#, .NET",
+        "question": "What is ASP.NET Core?",
+        "answer": "ASP.NET Core is a cross-platform, high-performance framework for building modern, cloud-based, internet-connected applications. <a href='https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-5.0' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 54,
+        "category": "C#, .NET",
+        "question": "What is a NuGet package?",
+        "answer": "A NuGet package is a single ZIP file that contains compiled code (DLLs), other files related to that code, and a descriptive manifest that includes information such as the package's version number. <a href='https://docs.microsoft.com/en-us/nuget/what-is-nuget' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 55,
+        "category": "C#",
+        "question": "What is the difference between a field and a property in C#?",
+        "answer": "A field is a variable of any type that is declared directly in a class. A property is a member that provides a flexible mechanism to read, write, or compute the value of a private field. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/fields' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 56,
+        "category": "C#",
+        "question": "What is a constructor in C#?\nWhat is its purpose?",
+        "answer": "A constructor is a special method that is called when an instance of a class is created. Its purpose is to initialize objects of that class. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 57,
+        "category": "C#",
+        "question": "What is a destructor in C#?\nWhat is its purpose?",
+        "answer": "A destructor is a method that is called when an object is about to be destroyed. Its purpose is to perform any necessary final clean-up. Destructors are rarely needed in C# due to the garbage collector. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/destructors' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 58,
+        "category": "C#, Object Oriented",
+        "question": "What is method hiding in C#?\nProvide an example.",
+        "answer": "Method hiding occurs when a derived class defines a method with the same name as a method in its base class. It is achieved using the 'new' keyword. Example: class Base { public void Show() {} } class Derived : Base { public new void Show() {} } <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-the-new-keyword' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 59,
+        "category": "C#, Object Oriented",
+        "question": "What is an overriding method in C#?\nHow does it work?",
+        "answer": "An overriding method in C# is a method in a derived class that provides a specific implementation of a method that is already defined in its base class. The base class method must be marked with the 'virtual' keyword, and the derived class method must be marked with the 'override' keyword. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/override' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 60,
+        "category": "C#, Object Oriented",
+        "question": "What is the difference between method overloading and method overriding?",
+        "answer": "Method overloading is the ability to define multiple methods with the same name but different parameters. Method overriding is the ability to provide a new implementation of a method in a derived class that is already defined in the base class. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/inheritance' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 61,
+        "category": "C#",
+        "question": "What is the difference between 'throw' and 'throw ex'?",
+        "answer": "'throw' is used to rethrow the current exception while preserving the original stack trace. 'throw ex' is used to throw a new exception, which resets the stack trace. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/throw' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 62,
+        "category": "C#",
+        "question": "What is the purpose of the 'lock' statement in C#?\nProvide an example.",
+        "answer": "The 'lock' statement is used to ensure that a block of code runs to completion without being interrupted by other threads. Example: lock (lockObject) { // critical section } <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/lock-statement' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 63,
+        "category": "C#",
+        "question": "What is a static constructor in C#?\nWhen is it called?",
+        "answer": "A static constructor is a constructor that is called before any static members are accessed or any static members are referenced. It is used to initialize static members of the class. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-constructors' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 64,
+        "category": "C#",
+        "question": "What is an indexer in C#?\nHow is it used?",
+        "answer": "An indexer allows an object to be indexed in a manner similar to arrays. It is used to access elements of an object using array-like syntax. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 65,
+        "category": "C#",
+        "question": "What is the difference between 'String' and 'string' in C#?",
+        "answer": "'String' is a class in the .NET Framework in the System namespace. 'string' is an alias in C# for System.String. They are interchangeable. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 66,
+        "category": "C#",
+        "question": "What is an anonymous type in C#?\nHow is it used?",
+        "answer": "An anonymous type provides a way to encapsulate a set of read-only properties into a single object without having to explicitly define a type first. It is used for convenience and to simplify coding. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/anonymous-types' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 67,
+        "category": "C#",
+        "question": "What is the difference between '==' and 'Equals' method?",
+        "answer": "'==' operator is used for reference equality for reference types and value equality for value types. The 'Equals' method is used for value equality and can be overridden to provide custom equality comparison. <a href='https://docs.microsoft.com/en-us/dotnet/api/system.object.equals' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 68,
+        "category": "C#, .NET",
+        "question": "What is the difference between the 'abstract' and 'sealed' keywords in C#?",
+        "answer": "'abstract' keyword is used to define an incomplete class that cannot be instantiated and must be derived. 'sealed' keyword is used to prevent a class from being inherited. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 69,
+        "category": "C#, .NET",
+        "question": "What is a partial class in C#?\nHow is it used?",
+        "answer": "A partial class allows the definition of a class to be split into multiple files. It is used to organize code and separate different aspects of the class. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 70,
+        "category": "C#, .NET",
+        "question": "What is the difference between 'Task' and 'Thread' in C#?",
+        "answer": "'Task' represents an asynchronous operation that can be awaited, while 'Thread' represents a separate path of execution. 'Task' is a higher-level abstraction than 'Thread'. <a href='https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-based-asynchronous-programming' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 71,
+        "category": "C#, .NET",
+        "question": "What is the difference between 'Task.Run' and 'Thread.Start'?",
+        "answer": "'Task.Run' is used to queue a task to run on the thread pool, while 'Thread.Start' creates a new thread and starts it. 'Task.Run' is preferred for CPU-bound and I/O-bound operations. <a href='https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-based-asynchronous-programming' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 72,
+        "category": "C#, .NET",
+        "question": "What is the purpose of 'await Task.Yield()'?",
+        "answer": "'await Task.Yield()' is used to asynchronously yield control back to the current context. It is used to force an asynchronous method to complete asynchronously. <a href='https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.yield' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 73,
+        "category": "C#, Object Oriented",
+        "question": "What is the difference between composition and inheritance?",
+        "answer": "Composition is a design principle where a class is composed of one or more objects, while inheritance is a relationship where a class derives from another class. Composition is used to achieve code reuse, while inheritance is used to establish an 'is-a' relationship. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/composition-over-inheritance' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 74,
+        "category": "C#, .NET",
+        "question": "What is a value type in C#?\nProvide examples.",
+        "answer": "A value type directly contains its data and is stored on the stack. Examples include int, float, double, bool, and struct. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/value-types' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 75,
+        "category": "C#, .NET",
+        "question": "What is a reference type in C#?\nProvide examples.",
+        "answer": "A reference type contains a reference to its data and is stored on the heap. Examples include class, interface, delegate, and array. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 76,
+        "category": "C#",
+        "question": "What is a sealed class in C#?\nHow is it used?",
+        "answer": "A sealed class is a class that cannot be inherited. It is used to prevent further derivation of the class. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 77,
+        "category": "C#, Object Oriented",
+        "question": "What is method hiding in C#?\nProvide an example.",
+        "answer": "Method hiding occurs when a derived class defines a method with the same name as a method in its base class. It is achieved using the 'new' keyword. Example: class Base { public void Show() {} } class Derived : Base { public new void Show() {} } <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-the-new-keyword' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 78,
+        "category": "C#, Object Oriented",
+        "question": "What is an overriding method in C#?\nHow does it work?",
+        "answer": "An overriding method in C# is a method in a derived class that provides a specific implementation of a method that is already defined in its base class. The base class method must be marked with the 'virtual' keyword, and the derived class method must be marked with the 'override' keyword. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/override' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 79,
+        "category": "C#, Object Oriented",
+        "question": "What is the difference between method overloading and method overriding?",
+        "answer": "Method overloading is the ability to define multiple methods with the same name but different parameters. Method overriding is the ability to provide a new implementation of a method in a derived class that is already defined in the base class. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/inheritance' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 80,
+        "category": "C#, .NET",
+        "question": "What is the difference between 'Task' and 'Thread' in C#?",
+        "answer": "'Task' represents an asynchronous operation that can be awaited, while 'Thread' represents a separate path of execution. 'Task' is a higher-level abstraction than 'Thread'. <a href='https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-based-asynchronous-programming' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 81,
+        "category": "C#, .NET",
+        "question": "What is the difference between 'Task.Run' and 'Thread.Start'?",
+        "answer": "'Task.Run' is used to queue a task to run on the thread pool, while 'Thread.Start' creates a new thread and starts it. 'Task.Run' is preferred for CPU-bound and I/O-bound operations. <a href='https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-based-asynchronous-programming' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 82,
+        "category": "C#, .NET",
+        "question": "What is the purpose of 'await Task.Yield()'?",
+        "answer": "'await Task.Yield()' is used to asynchronously yield control back to the current context. It is used to force an asynchronous method to complete asynchronously. <a href='https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.yield' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 83,
+        "category": "C#, Object Oriented",
+        "question": "What is the difference between composition and inheritance?",
+        "answer": "Composition is a design principle where a class is composed of one or more objects, while inheritance is a relationship where a class derives from another class. Composition is used to achieve code reuse, while inheritance is used to establish an 'is-a' relationship. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/composition-over-inheritance' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 84,
+        "category": "C#, .NET",
+        "question": "What is a value type in C#?\nProvide examples.",
+        "answer": "A value type directly contains its data and is stored on the stack. Examples include int, float, double, bool, and struct. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/value-types' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 85,
+        "category": "C#, .NET",
+        "question": "What is a reference type in C#?\nProvide examples.",
+        "answer": "A reference type contains a reference to its data and is stored on the heap. Examples include class, interface, delegate, and array. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 86,
+        "category": "C#, Object Oriented",
+        "question": "What is the Open/Closed Principle?",
+        "answer": "The Open/Closed Principle states that software entities should be open for extension but closed for modification. This means that the behavior of a module can be extended without modifying its source code. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/solid' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 87,
+        "category": "C#, Object Oriented",
+        "question": "What is the Single Responsibility Principle?",
+        "answer": "The Single Responsibility Principle states that a class should have only one reason to change, meaning it should have only one job or responsibility. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/solid' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 88,
+        "category": "C#, Object Oriented",
+        "question": "What is the Liskov Substitution Principle?",
+        "answer": "The Liskov Substitution Principle states that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/solid' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 89,
+        "category": "C#, Object Oriented",
+        "question": "What is the Interface Segregation Principle?",
+        "answer": "The Interface Segregation Principle states that no client should be forced to depend on methods it does not use. This means that interfaces should be specific to clients and not contain unnecessary methods. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/solid' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 90,
+        "category": "C#, Object Oriented",
+        "question": "What is the Dependency Inversion Principle?",
+        "answer": "The Dependency Inversion Principle states that high-level modules should not depend on low-level modules, but both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions. <a href='https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/solid' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 91,
+        "category": "C#, .NET",
+        "question": "What is the .NET Standard?",
+        "answer": ".NET Standard is a formal specification of .NET APIs that are intended to be available on all .NET implementations. It allows libraries to be used across different .NET implementations. <a href='https://docs.microsoft.com/en-us/dotnet/standard/net-standard' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 92,
+        "category": "C#, .NET",
+        "question": "What is the Global Assembly Cache (GAC)?",
+        "answer": "The Global Assembly Cache (GAC) is a machine-wide code cache for the Common Language Infrastructure (CLI). It is used to store assemblies that are intended to be shared by several applications on the computer. <a href='https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 93,
+        "category": "C#, .NET",
+        "question": "What is the difference between 'managed' and 'unmanaged' code?",
+        "answer": "Managed code is executed by the CLR and benefits from features such as garbage collection, exception handling, and type safety. Unmanaged code is executed directly by the operating system and does not have these benefits. <a href='https://docs.microsoft.com/en-us/dotnet/standard/managed-code' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 94,
+        "category": "C#, .NET",
+        "question": "What is ASP.NET?",
+        "answer": "ASP.NET is a web framework for building modern web apps and services with .NET. It allows you to build dynamic websites using C# and the .NET framework. <a href='https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-5.0' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 95,
+        "category": "C#, .NET",
+        "question": "What is ASP.NET Core?",
+        "answer": "ASP.NET Core is a cross-platform, high-performance framework for building modern, cloud-based, internet-connected applications. <a href='https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-5.0' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 96,
+        "category": "C#, .NET",
+        "question": "What is a NuGet package?",
+        "answer": "A NuGet package is a single ZIP file that contains compiled code (DLLs), other files related to that code, and a descriptive manifest that includes information such as the package's version number. <a href='https://docs.microsoft.com/en-us/nuget/what-is-nuget' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 97,
+        "category": "C#, Object Oriented",
+        "question": "What is method hiding in C#?\nProvide an example.",
+        "answer": "Method hiding occurs when a derived class defines a method with the same name as a method in its base class. It is achieved using the 'new' keyword. Example: class Base { public void Show() {} } class Derived : Base { public new void Show() {} } <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-the-new-keyword' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 98,
+        "category": "C#, Object Oriented",
+        "question": "What is an overriding method in C#?\nHow does it work?",
+        "answer": "An overriding method in C# is a method in a derived class that provides a specific implementation of a method that is already defined in its base class. The base class method must be marked with the 'virtual' keyword, and the derived class method must be marked with the 'override' keyword. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/override' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 99,
+        "category": "C#, Object Oriented",
+        "question": "What is the difference between method overloading and method overriding?",
+        "answer": "Method overloading is the ability to define multiple methods with the same name but different parameters. Method overriding is the ability to provide a new implementation of a method in a derived class that is already defined in the base class. <a href='https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/inheritance' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 100,
+        "category": "C#, .NET",
+        "question": "What is the difference between 'Task' and 'Thread' in C#?",
+        "answer": "'Task' represents an asynchronous operation that can be awaited, while 'Thread' represents a separate path of execution. 'Task' is a higher-level abstraction than 'Thread'. <a href='https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-based-asynchronous-programming' target='_blank'>Learn more</a>"
     }
 ]

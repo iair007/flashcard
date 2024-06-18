@@ -9,6 +9,7 @@
 <table class="table">
     <thead>
         <tr>
+            <th>Id</th>
             <th>Category</th>
             <th>Question</th>
         </tr>
@@ -17,6 +18,7 @@
         @for (var i = 0; i < Model.Count; i++)
         {
             <tr class="flashcard-row" data-index="@i">
+                <td>@Model[i].Id</td>
                 <td>@Model[i].Category</td>
                 <td>@Html.Raw(Model[i].Question.Replace("\n", "<br>"))</td>
             </tr>

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     window.showFlashcard = function () {
         const flashcard = flashcards[currentFlashcardIndex];
-        document.getElementById('flashcardModalLabel').innerText = flashcard.Category;
+        document.getElementById('flashcardModalLabel').innerText = flashcard.Id + '-' + flashcard.Category;
         document.getElementById('flashcardContent').innerHTML = flashcard.Question.replace(/\n/g, '<br>');
         document.getElementById('flashcardContentBack').innerHTML = flashcard.Answer.replace(/\n/g, '<br>');
         document.getElementById('watermark').innerText = "Question";
