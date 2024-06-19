@@ -28,7 +28,13 @@
     </table>
 </div>
 
-<button class="btn btn-primary" onclick="startGame()">Start Game</button>
+<div class="action-buttons">
+    <button class="btn btn-primary" onclick="startGame()">Start Random Game</button>
+    <div class="start-from-id">
+        <button class="btn btn-primary" onclick="startGameFromId()">Start Game from ID</button>
+        <input type="text" id="startFromId" placeholder="Enter ID" class="ml-2">
+    </div>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="flashcardModal" tabindex="-1" role="dialog" aria-labelledby="flashcardModalLabel" aria-hidden="true" data-backdrop="static">
@@ -52,6 +58,7 @@
                 </div>
             </div>
             <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="previousFlashcard()">Previous Flashcard</button>
                 <button type="button" class="btn btn-primary" onclick="nextFlashcard()">Next Flashcard</button>
             </div>
         </div>
@@ -62,3 +69,9 @@
 <script id="flashcards-data" type="application/json">
     @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model))
 </script>
+
+<!-- Link to the external CSS file -->
+<link href="~/css/flashcards.css" rel="stylesheet">
+
+<!-- Include the external JavaScript file -->
+<script src="~/js/flashcards.js"></script>

@@ -18,9 +18,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
         $('#flashcardModal').modal('show');
     };
 
+    window.startGameFromId = function () {
+        const id = parseInt(document.getElementById('startFromId').value);
+        const index = flashcards.findIndex(f => f.Id === id);
+        if (index !== -1) {
+            currentFlashcardIndex = index;
+            showFlashcard();
+            $('#flashcardModal').modal('show');
+        } else {
+            alert('Flashcard with ID ' + id + ' not found.');
+        }
+    };
+
     window.showFlashcard = function () {
-        const flashcard = randomFlashcards[currentFlashcardIndex];
-        document.getElementById('flashcardModalLabel').innerText = flashcard.Id + '-' + flashcard.Category;
+        const flashcard = flashcards[currentFlashcardIndex];
+        document.getElementById('flashcardModalLabel').innerText = flashcard.Id + ' - ' + flashcard.Category;
         document.getElementById('flashcardContent').innerHTML = flashcard.Question.replace(/\n/g, '<br>');
         document.getElementById('flashcardContentBack').innerHTML = flashcard.Answer.replace(/\n/g, '<br>');
         document.getElementById('watermark').innerText = "Question";
@@ -46,6 +58,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         showFlashcard();
     };
 
+    window.previousFlashcard = function () {
+        currentFlashcardIndex = (currentFlashcardIndex - 1 + randomFlashcards.length) % randomFlashcards.length;
+        showFlashcard();
+    };
+
     // Ensure the close button works
     document.querySelector('.modal .close').addEventListener('click', function () {
         $('#flashcardModal').modal('hide');
@@ -54,7 +71,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Event listener for table rows
     document.querySelectorAll('.flashcard-row').forEach(row => {
         row.addEventListener('click', function () {
-            currentFlashcardIndex = this.dataset.index;
+            currentFlashcardIndex = parseInt(this.dataset.index); // Ensure index is correctly parsed
             showFlashcard();
             $('#flashcardModal').modal('show');
         });

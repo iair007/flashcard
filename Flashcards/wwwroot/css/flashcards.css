@@ -48,3 +48,20 @@
     color: rgba(0, 0, 0, 0.5);
     margin-left: 10px;
 }
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.start-from-id {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+    .start-from-id input {
+        width: 100px;
+        margin-left: 5px;
+    }
