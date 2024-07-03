@@ -5,13 +5,15 @@
 }
 
 <div class="card flip-container" onclick="flipCard(event)">
-    <div class="card-body front">
-        <h5>@Model.Category</h5>
-        <p>@Html.Raw(Model.Question.Replace("\n", "<br>"))</p>
-    </div>
-    <div class="card-body back">
-        <h5>@Model.Category</h5>
-        <p>@Html.Raw(Model.Answer.Replace("\n", "<br>"))</p>
+    <div class="flipper">
+        <div class="card-body front">
+            <h5>@Model.Category</h5>
+            <p>@Html.Raw(Model.Question.Replace("\n", "<br>"))</p>
+        </div>
+        <div class="card-body back">
+            <h5>@Model.Category</h5>
+            <p>@Html.Raw(Model.Answer.Replace("\n", "<br>"))</p>
+        </div>
     </div>
 </div>
 

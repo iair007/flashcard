@@ -1,32 +1,57 @@
-using Flashcards.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using FlashcardsApp.Models;
 
-namespace Flashcards.Controllers
+namespace FlashcardsApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public IActionResult Categories()
         {
-            _logger = logger;
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "data", "flashcards.json");
+            var json = System.IO.File.ReadAllText(filePath);
+            var flashcards = JArray.Parse(json);
+            var categories = flashcards.Select(fc => fc["category"].ToString()).Distinct().ToList();
+            return View(categories);
         }
 
-        public IActionResult Index()
+        public IActionResult Flashcards()
         {
-            return View();
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "data", "flashcards.json");
+            var json = System.IO.File.ReadAllText(filePath);
+            var flashcards = JArray.Parse(json).Select(fc => new Flashcard
+            {
+                Id = long.Parse(fc["id"].ToString()),
+                Category = fc["category"].ToString(),
+                Question = fc["question"].ToString(),
+                Answer = fc["answer"]?.ToString() // Populate Answer property
+            }).ToList();
+
+            return View("/Views/Flashcards/Index.cshtml", flashcards);
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Flashcards(string[] selectedCategories)
         {
-            return View();
-        }
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "data", "flashcards.json");
+            var json = System.IO.File.ReadAllText(filePath);
+            var flashcards = JArray.Parse(json).Select(fc => new Flashcard
+            {
+                Id =long.Parse(fc["id"].ToString()),
+                Category = fc["category"].ToString(),
+                Question = fc["question"].ToString(),
+                Answer = fc["answer"]?.ToString() // Populate Answer property
+            }).ToList();
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (selectedCategories != null && selectedCategories.Length > 0)
+            {
+                flashcards = flashcards.Where(fc => selectedCategories.Contains(fc.Category)).ToList();
+            }
+
+            return View("/Views/Flashcards/Index.cshtml", flashcards);
         }
     }
 }

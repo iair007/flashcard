@@ -1,79 +1,81 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    let flashcards = JSON.parse(document.getElementById('flashcards-data').textContent);
-    let currentFlashcardIndex = 0;
-    let showingQuestion = true;
-    let randomFlashcards = [...flashcards];
+let currentFlashcardIndex = 0;
+let flashcards = [];
 
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
+window.onload = function () {
+    let flashcardsData = document.getElementById("flashcards-data");
+    if (flashcardsData) {
+        flashcards = JSON.parse(flashcardsData.textContent);
+        console.log("Flashcards loaded:", flashcards); // Debugging line
+    } else {
+        console.error("flashcards-data element not found");
     }
+};
 
-    window.startGame = function () {
-        shuffle(randomFlashcards);
-        currentFlashcardIndex = 0;
+window.startGame = function () {
+    if (flashcards.length > 0) {
+        currentFlashcardIndex = Math.floor(Math.random() * flashcards.length);
         showFlashcard();
-        $('#flashcardModal').modal('show');
-    };
+    } else {
+        console.error("No flashcards available");
+    }
+};
 
-    window.startGameFromId = function () {
-        const id = parseInt(document.getElementById('startFromId').value);
-        const index = flashcards.findIndex(f => f.Id === id);
+window.startGameFromId = function () {
+    let startFromIdInput = document.getElementById("startFromId");
+    if (startFromIdInput) {
+        let id = startFromIdInput.value;
+        let index = flashcards.findIndex(f => f.Id === id);
         if (index !== -1) {
             currentFlashcardIndex = index;
             showFlashcard();
-            $('#flashcardModal').modal('show');
         } else {
-            alert('Flashcard with ID ' + id + ' not found.');
+            alert("Flashcard ID not found.");
         }
-    };
+    } else {
+        console.error("startFromId element not found");
+    }
+};
 
-    window.showFlashcard = function () {
-        const flashcard = flashcards[currentFlashcardIndex];
-        document.getElementById('flashcardModalLabel').innerText = flashcard.Id + ' - ' + flashcard.Category;
-        document.getElementById('flashcardContent').innerHTML = flashcard.Question.replace(/\n/g, '<br>');
-        document.getElementById('flashcardContentBack').innerHTML = flashcard.Answer.replace(/\n/g, '<br>');
-        document.getElementById('watermark').innerText = "Question";
-        showingQuestion = true;
-        document.querySelector('.card').classList.remove('flip');
-    };
+window.showFlashcard = function () {
+    let flashcard = flashcards[currentFlashcardIndex];
+    console.log("Showing flashcard:", flashcard); // Debugging line
+    if (flashcard) {
+        let flashcardContent = document.getElementById("flashcardContent");
+        let flashcardContentBack = document.getElementById("flashcardContentBack");
+        let flashcardModalLabel = document.getElementById("flashcardModalLabel");
 
-    window.flipCard = function (event) {
-        if (event.target.tagName.toLowerCase() === 'a') {
-            return;
-        }
-        document.querySelector('.card').classList.toggle('flip');
-        if (showingQuestion) {
-            document.getElementById('watermark').innerText = "Answer";
-        } else {
-            document.getElementById('watermark').innerText = "Question";
-        }
-        showingQuestion = !showingQuestion;
-    };
-
-    window.nextFlashcard = function () {
-        currentFlashcardIndex = (currentFlashcardIndex + 1) % randomFlashcards.length;
-        showFlashcard();
-    };
-
-    window.previousFlashcard = function () {
-        currentFlashcardIndex = (currentFlashcardIndex - 1 + randomFlashcards.length) % randomFlashcards.length;
-        showFlashcard();
-    };
-
-    // Ensure the close button works
-    document.querySelector('.modal .close').addEventListener('click', function () {
-        $('#flashcardModal').modal('hide');
-    });
-
-    // Event listener for table rows
-    document.querySelectorAll('.flashcard-row').forEach(row => {
-        row.addEventListener('click', function () {
-            currentFlashcardIndex = parseInt(this.dataset.index); // Ensure index is correctly parsed
-            showFlashcard();
-            $('#flashcardModal').modal('show');
+        console.log("Elements found:", {
+            flashcardContent,
+            flashcardContentBack,
+            flashcardModalLabel
         });
-    });
-});
+
+        if (flashcardContent && flashcardContentBack && flashcardModalLabel) {
+            flashcardModalLabel.textContent = "Flashcard ID: " + flashcard.Id;
+            flashcardContent.innerHTML = flashcard.Question.replace(/\n/g, "<br>");
+            flashcardContentBack.innerHTML = flashcard.Answer ? flashcard.Answer.replace(/\n/g, "<br>") : "No answer available.";
+            $('#flashcardModal').modal('show');
+        } else {
+            if (!flashcardContent) console.error("flashcardContent element not found");
+            if (!flashcardContentBack) console.error("flashcardContentBack element not found");
+            if (!flashcardModalLabel) console.error("flashcardModalLabel element not found");
+        }
+    } else {
+        console.error("Flashcard not found at index", currentFlashcardIndex);
+    }
+};
+
+window.nextFlashcard = function () {
+    currentFlashcardIndex = (currentFlashcardIndex + 1) % flashcards.length;
+    showFlashcard();
+};
+
+window.previousFlashcard = function () {
+    currentFlashcardIndex = (currentFlashcardIndex - 1 + flashcards.length) % flashcards.length;
+    showFlashcard();
+};
+
+window.flipCard = function (event) {
+    let card = event.currentTarget.closest('.flip-container');
+    card.classList.toggle("flipped");
+};

@@ -1,0 +1,60 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<h1>Select Categories</h1>
+
+<input type="text" id="searchBox" placeholder="Search categories..." onkeyup="filterCategories()" />
+<br />
+<br />
+
+<button type="button" onclick="selectAll()">Select All</button>
+<button type="button" onclick="deselectAll()">Deselect All</button>
+
+<form method="post" action="/Home/Flashcards">
+    <div id="categoryList">
+        @foreach (var category in Model)
+        {
+            <div>
+                <input type="checkbox" name="selectedCategories" value="@category" /> @category
+            </div>
+        }
+    </div>
+    <br />
+    <button type="submit">Show Flashcards</button>
+</form>
+
+@section Scripts {
+    <script>
+        function selectAll() {
+            var checkboxes = document.getElementsByName('selectedCategories');
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = true;
+            }
+        }
+
+        function deselectAll() {
+            var checkboxes = document.getElementsByName('selectedCategories');
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = false;
+            }
+        }
+
+        function filterCategories() {
+            var input, filter, div, divs, i, txtValue;
+            input = document.getElementById('searchBox');
+            filter = input.value.toUpperCase();
+            div = document.getElementById('categoryList');
+            divs = div.getElementsByTagName('div');
+            for (i = 0; i < divs.length; i++) {
+                txtValue = divs[i].textContent || divs[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    divs[i].style.display = "";
+                } else {
+                    divs[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+}

@@ -598,5 +598,533 @@
         "category": "C#, .NET",
         "question": "What is the difference between 'Task' and 'Thread' in C#?",
         "answer": "'Task' represents an asynchronous operation that can be awaited, while 'Thread' represents a separate path of execution. 'Task' is a higher-level abstraction than 'Thread'. <a href='https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-based-asynchronous-programming' target='_blank'>Learn more</a>"
+    },
+	{
+        "id": 101,
+        "category": "REST API",
+        "question": "What is a REST API?",
+        "answer": "A REST API (Representational State Transfer Application Programming Interface) is a set of rules and conventions for building and interacting with web services. It uses HTTP requests to perform CRUD operations: Create, Read, Update, and Delete. <a href='https://restfulapi.net/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 102,
+        "category": "REST API",
+        "question": "What are the main HTTP methods used in RESTful services?",
+        "answer": "The main HTTP methods used in RESTful services are GET, POST, PUT, PATCH, and DELETE. Each method corresponds to a CRUD operation: GET retrieves data, POST creates data, PUT updates data, PATCH partially updates data, and DELETE removes data. <a href='https://restfulapi.net/http-methods/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 103,
+        "category": "REST API",
+        "question": "What is the difference between PUT and PATCH methods in REST?",
+        "answer": "The PUT method updates a resource by replacing it with a new one, while the PATCH method applies partial modifications to a resource. <a href='https://restfulapi.net/rest-put-vs-patch/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 104,
+        "category": "REST API",
+        "question": "What is an endpoint in REST API?",
+        "answer": "An endpoint is a specific URL at which a resource can be accessed or a service can be performed in a REST API. It usually consists of a base URL followed by a resource path. <a href='https://restfulapi.net/resource-naming/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 105,
+        "category": "REST API",
+        "question": "What are status codes in REST API?",
+        "answer": "Status codes are standardized codes returned by the server to indicate the outcome of the client's request. Common status codes include 200 (OK), 201 (Created), 204 (No Content), 400 (Bad Request), 401 (Unauthorized), 404 (Not Found), and 500 (Internal Server Error). <a href='https://restfulapi.net/http-status-codes/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 106,
+        "category": "REST API",
+        "question": "What is statelessness in REST?",
+        "answer": "Statelessness means that each request from a client to a server must contain all the information needed to understand and process the request. The server does not store any state about the client session. <a href='https://restfulapi.net/statelessness/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 107,
+        "category": "REST API",
+        "question": "What is HATEOAS in REST API?",
+        "answer": "HATEOAS (Hypermedia As The Engine Of Application State) is a constraint of REST APIs that allows clients to dynamically navigate resources by including hypermedia links in the responses. <a href='https://restfulapi.net/hateoas/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 108,
+        "category": "REST API",
+        "question": "What is versioning in REST API?",
+        "answer": "Versioning is the practice of managing changes to an API by providing different versions. This can be done through URL paths, query parameters, or headers. <a href='https://restfulapi.net/versioning/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 109,
+        "category": "REST API",
+        "question": "What is the purpose of the OPTIONS method in REST?",
+        "answer": "The OPTIONS method is used to describe the communication options for the target resource. It allows clients to determine which HTTP methods are supported by the server for a particular resource. <a href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 110,
+        "category": "REST API",
+        "question": "What are query parameters in REST API?",
+        "answer": "Query parameters are additional parameters added to the URL of an API endpoint to filter or modify the response. They are specified after the '?' character in the URL. <a href='https://restfulapi.net/rest-api-design-tips/' target='_blank'>Learn more</a>"
+    },
+	{
+        "id": 111,
+        "category": "REST API",
+        "question": "What is CORS and why is it important in REST APIs?",
+        "answer": "CORS (Cross-Origin Resource Sharing) is a security feature implemented by web browsers to allow or restrict resources requested from another domain. It is important in REST APIs to control how resources are shared between different origins. <a href='https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 112,
+        "category": "REST API",
+        "question": "What is JSON and why is it commonly used in REST APIs?",
+        "answer": "JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy to read and write for humans and easy to parse and generate for machines. It is commonly used in REST APIs for its simplicity and compatibility with web technologies. <a href='https://www.json.org/json-en.html' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 113,
+        "category": "REST API",
+        "question": "How do you secure a REST API?",
+        "answer": "Securing a REST API involves using HTTPS, implementing authentication and authorization mechanisms (such as OAuth), validating inputs, and ensuring proper error handling. <a href='https://restfulapi.net/security-essentials/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 114,
+        "category": "REST API",
+        "question": "What is pagination in REST API?",
+        "answer": "Pagination is a technique used to divide a large set of data into smaller, more manageable chunks (pages). It is commonly implemented using query parameters like page number and page size. <a href='https://restfulapi.net/paging/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 115,
+        "category": "REST API",
+        "question": "What is rate limiting in REST API?",
+        "answer": "Rate limiting is a technique used to control the number of requests a client can make to a server in a specified time period. It helps prevent abuse and ensures fair usage of resources. <a href='https://restfulapi.net/rate-limiting/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 116,
+        "category": "REST API",
+        "question": "What is a RESTful resource?",
+        "answer": "A RESTful resource is any piece of content that can be accessed and manipulated through a REST API. It is typically represented by a URL and can be a document, image, collection of other resources, etc. <a href='https://restfulapi.net/resource-naming/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 117,
+        "category": "REST API",
+        "question": "What is the difference between synchronous and asynchronous REST API calls?",
+        "answer": "Synchronous calls block the client until the server returns a response, while asynchronous calls allow the client to continue execution and handle the response once it is available. Asynchronous calls improve performance and responsiveness. <a href='https://restfulapi.net/asynchronous-operations/' target='_blank'>Learn more</a>"
+    },
+	 {
+        "id": 118,
+        "category": "REST API",
+        "question": "What are headers in REST API and why are they used?",
+        "answer": "Headers are key-value pairs sent in HTTP requests and responses that provide additional information about the request or response. They are used for content negotiation, authentication, and controlling caching, among other purposes. <a href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 119,
+        "category": "REST API",
+        "question": "What is content negotiation in REST API?",
+        "answer": "Content negotiation is a mechanism that allows a client to specify the desired format of the response, such as JSON, XML, or HTML, using the Accept header in the HTTP request. <a href='https://restfulapi.net/content-negotiation/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 120,
+        "category": "REST API",
+        "question": "What is an API gateway and how does it relate to REST APIs?",
+        "answer": "An API gateway is a server that acts as an API front-end, receiving API requests, enforcing throttling and security policies, routing requests to the appropriate backend services, and aggregating the results. It simplifies the management of REST APIs. <a href='https://www.nginx.com/learn/api-gateway/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 121,
+        "category": "REST API",
+        "question": "What are some common REST API testing tools?",
+        "answer": "Common REST API testing tools include Postman, Insomnia, SoapUI, and REST-assured. These tools help in testing endpoints, validating responses, and automating API testing processes. <a href='https://www.guru99.com/rest-api-testing.html' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 122,
+        "category": "REST API",
+        "question": "What is a webhook and how is it used in REST APIs?",
+        "answer": "A webhook is a way for an application to provide other applications with real-time information. It sends data to a specific URL when an event occurs. Webhooks are commonly used in REST APIs to notify clients of changes or updates. <a href='https://resthooks.org/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 123,
+        "category": "REST API",
+        "question": "What is OAuth and how is it used in REST APIs?",
+        "answer": "OAuth is an open standard for access delegation, commonly used to grant websites or applications limited access to a user's information without exposing passwords. It is used in REST APIs to manage authentication and authorization. <a href='https://oauth.net/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 124,
+        "category": "REST API",
+        "question": "What are the advantages of using REST APIs?",
+        "answer": "Advantages of using REST APIs include scalability, statelessness, support for multiple data formats, ease of integration, and wide adoption. These features make REST APIs suitable for web services and applications. <a href='https://restfulapi.net/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 125,
+        "category": "REST API",
+        "question": "What is idempotency in REST API and why is it important?",
+        "answer": "Idempotency means that an operation can be performed multiple times without changing the result beyond the initial application. In REST APIs, this is important for methods like PUT and DELETE to ensure reliable and predictable behavior. <a href='https://restfulapi.net/idempotent-rest-apis/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 126,
+        "category": "REST API",
+        "question": "What is a resource representation in REST API?",
+        "answer": "A resource representation in REST API is a format in which a resource is presented, typically in JSON or XML. It includes the data and metadata about the resource, allowing clients to understand and manipulate it. <a href='https://restfulapi.net/resource-representation/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 127,
+        "category": "REST API",
+        "question": "What are some common mistakes to avoid when designing REST APIs?",
+        "answer": "Common mistakes to avoid include not using proper HTTP status codes, failing to document the API, ignoring security concerns, creating overly complex URIs, and not handling errors properly. <a href='https://restfulapi.net/common-mistakes/' target='_blank'>Learn more</a>"
+    },
+	    {
+        "id": 201,
+        "category": "Cloud Computing",
+        "question": "What is cloud computing?",
+        "answer": "Cloud computing is the delivery of computing services over the internet, including storage, processing, and software, on a pay-as-you-go basis. <a href='https://azure.microsoft.com/en-us/overview/what-is-cloud-computing/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 202,
+        "category": "Cloud Computing",
+        "question": "What are the different types of cloud computing services?",
+        "answer": "The main types of cloud computing services are Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). <a href='https://www.ibm.com/cloud/learn/iaas-paas-saas' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 203,
+        "category": "Cloud Computing",
+        "question": "What is IaaS (Infrastructure as a Service)?",
+        "answer": "IaaS provides virtualized computing resources over the internet, such as virtual machines, storage, and networks. <a href='https://azure.microsoft.com/en-us/overview/what-is-iaas/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 204,
+        "category": "Cloud Computing",
+        "question": "What is PaaS (Platform as a Service)?",
+        "answer": "PaaS offers hardware and software tools over the internet, typically for application development. It includes infrastructure and platforms that support the complete lifecycle of building and delivering web applications. <a href='https://azure.microsoft.com/en-us/overview/what-is-paas/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 205,
+        "category": "Cloud Computing",
+        "question": "What is SaaS (Software as a Service)?",
+        "answer": "SaaS delivers software applications over the internet, on a subscription basis. It allows users to connect to and use cloud-based apps via the internet. <a href='https://azure.microsoft.com/en-us/overview/what-is-saas/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 206,
+        "category": "Cloud Computing",
+        "question": "What are public, private, and hybrid clouds?",
+        "answer": "Public clouds are owned and operated by third-party cloud service providers. Private clouds are used exclusively by a single organization. Hybrid clouds combine public and private clouds, allowing data and applications to be shared between them. <a href='https://www.ibm.com/cloud/learn/public-cloud-private-cloud-and-hybrid-cloud' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 207,
+        "category": "Cloud Computing",
+        "question": "What is serverless computing?",
+        "answer": "Serverless computing allows developers to build and run applications without managing server infrastructure. The cloud provider handles the server management and provisioning dynamically. <a href='https://aws.amazon.com/serverless/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 208,
+        "category": "Cloud Computing",
+        "question": "What is a virtual machine (VM)?",
+        "answer": "A virtual machine is a software emulation of physical computers. VMs run operating systems and applications just like a physical machine. <a href='https://azure.microsoft.com/en-us/overview/what-is-a-virtual-machine/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 209,
+        "category": "Cloud Computing",
+        "question": "What are containers in cloud computing?",
+        "answer": "Containers are lightweight, standalone executable packages that contain everything needed to run a piece of software, including the code, runtime, system tools, and libraries. <a href='https://www.docker.com/resources/what-container' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 210,
+        "category": "Cloud Computing",
+        "question": "What is Kubernetes?",
+        "answer": "Kubernetes is an open-source platform designed to automate deploying, scaling, and operating application containers. <a href='https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 211,
+        "category": "Cloud Computing",
+        "question": "What is multi-cloud?",
+        "answer": "Multi-cloud refers to the use of multiple cloud computing services from different providers in a single architecture to improve flexibility and avoid vendor lock-in. <a href='https://www.redhat.com/en/topics/cloud-computing/what-is-multicloud' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 212,
+        "category": "Cloud Computing",
+        "question": "What is cloud migration?",
+        "answer": "Cloud migration is the process of moving data, applications, or other business elements to a cloud computing environment. <a href='https://aws.amazon.com/what-is-cloud-migration/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 213,
+        "category": "Cloud Computing",
+        "question": "What is elasticity in cloud computing?",
+        "answer": "Elasticity is the ability of a cloud service to automatically scale resources up or down based on demand. <a href='https://azure.microsoft.com/en-us/overview/elasticity-vs-scalability-cloud/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 214,
+        "category": "Cloud Computing",
+        "question": "What is cloud scalability?",
+        "answer": "Scalability in cloud computing refers to the ability to increase or decrease IT resources as needed to meet changing demand. <a href='https://azure.microsoft.com/en-us/overview/elasticity-vs-scalability-cloud/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 215,
+        "category": "Cloud Computing",
+        "question": "What is cloud load balancing?",
+        "answer": "Cloud load balancing distributes incoming application traffic across multiple instances to ensure no single server becomes overwhelmed, ensuring high availability and reliability. <a href='https://aws.amazon.com/elasticloadbalancing/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 216,
+        "category": "Cloud Computing",
+        "question": "What is the difference between vertical scaling and horizontal scaling in the cloud?",
+        "answer": "Vertical scaling involves adding more power to an existing machine (e.g., CPU, RAM), while horizontal scaling involves adding more machines to handle increased load. <a href='https://www.ibm.com/cloud/blog/vertical-scaling-horizontal-scaling' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 217,
+        "category": "Cloud Computing",
+        "question": "What is an API Gateway in cloud computing?",
+        "answer": "An API Gateway is a server that acts as an API front-end, receiving API requests, enforcing throttling and security policies, routing requests to the appropriate backend services, and aggregating the results. <a href='https://aws.amazon.com/api-gateway/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 218,
+        "category": "Cloud Computing",
+        "question": "What is cloud storage?",
+        "answer": "Cloud storage is a cloud computing model that stores data on the internet through a cloud computing provider who manages and operates data storage as a service. <a href='https://aws.amazon.com/what-is-cloud-storage/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 219,
+        "category": "Cloud Computing",
+        "question": "What is the shared responsibility model in cloud computing?",
+        "answer": "The shared responsibility model outlines the security responsibilities of a cloud provider and its users. Cloud providers handle the security 'of' the cloud, while users are responsible for security 'in' the cloud. <a href='https://aws.amazon.com/compliance/shared-responsibility-model/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 220,
+        "category": "Cloud Computing",
+        "question": "What is cloud computing governance?",
+        "answer": "Cloud computing governance involves the processes and policies that ensure the effective and secure use of cloud services. It includes compliance, risk management, and resource management. <a href='https://www.ibm.com/cloud/learn/cloud-governance' target='_blank'>Learn more</a>"
+    },
+	 {
+        "id": 221,
+        "category": "Azure",
+        "question": "What is Microsoft Azure?",
+        "answer": "Microsoft Azure is a cloud computing platform and service created by Microsoft, providing a range of cloud services, including computing, analytics, storage, and networking. <a href='https://azure.microsoft.com/en-us/overview/what-is-azure/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 222,
+        "category": "Azure",
+        "question": "What is Azure Virtual Machines?",
+        "answer": "Azure Virtual Machines (VMs) are scalable computing resources that provide on-demand, scalable computing capacity in the cloud. They are used for various applications, including development and testing, running applications, and extending data centers. <a href='https://azure.microsoft.com/en-us/services/virtual-machines/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 223,
+        "category": "Azure",
+        "question": "What is Azure App Service?",
+        "answer": "Azure App Service is a fully managed platform for building, deploying, and scaling web apps. It supports multiple languages, including .NET, .NET Core, Java, Ruby, Node.js, PHP, and Python. <a href='https://azure.microsoft.com/en-us/services/app-service/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 224,
+        "category": "Azure",
+        "question": "What is Azure Functions?",
+        "answer": "Azure Functions is a serverless compute service that allows you to run event-driven code without having to explicitly provision or manage infrastructure. It is designed to accelerate and simplify the development of event-driven applications. <a href='https://azure.microsoft.com/en-us/services/functions/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 225,
+        "category": "Azure",
+        "question": "What is Azure DevOps?",
+        "answer": "Azure DevOps is a suite of development tools for planning, developing, delivering, and maintaining software. It includes services like Azure Repos, Azure Pipelines, Azure Boards, Azure Test Plans, and Azure Artifacts. <a href='https://azure.microsoft.com/en-us/services/devops/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 226,
+        "category": "Azure",
+        "question": "What is Azure Kubernetes Service (AKS)?",
+        "answer": "Azure Kubernetes Service (AKS) is a managed Kubernetes container orchestration service that simplifies deploying, managing, and operating Kubernetes clusters in Azure. <a href='https://azure.microsoft.com/en-us/services/kubernetes-service/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 227,
+        "category": "Azure",
+        "question": "What is Azure Blob Storage?",
+        "answer": "Azure Blob Storage is Microsoft's object storage solution for the cloud. It is optimized for storing massive amounts of unstructured data, such as text or binary data. <a href='https://azure.microsoft.com/en-us/services/storage/blobs/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 228,
+        "category": "Azure",
+        "question": "What is Azure Active Directory (Azure AD)?",
+        "answer": "Azure Active Directory (Azure AD) is a cloud-based identity and access management service that helps employees sign in and access resources. It supports single sign-on (SSO) and multi-factor authentication (MFA). <a href='https://azure.microsoft.com/en-us/services/active-directory/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 229,
+        "category": "Azure",
+        "question": "What is Azure SQL Database?",
+        "answer": "Azure SQL Database is a fully managed relational database service built for the cloud. It provides database-as-a-service, ensuring high availability, performance, and security. <a href='https://azure.microsoft.com/en-us/services/sql-database/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 230,
+        "category": "Azure",
+        "question": "What is the Azure Marketplace?",
+        "answer": "The Azure Marketplace is an online store for buying and selling cloud solutions certified to run on Azure. It includes software, services, and data solutions from Microsoft and partners. <a href='https://azure.microsoft.com/en-us/marketplace/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 231,
+        "category": "Azure",
+        "question": "What is Azure Logic Apps?",
+        "answer": "Azure Logic Apps is a cloud service that helps you schedule, automate, and orchestrate tasks, business processes, and workflows when you need to integrate apps, data, systems, and services across enterprises or organizations. <a href='https://azure.microsoft.com/en-us/services/logic-apps/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 232,
+        "category": "Azure",
+        "question": "What is Azure Cognitive Services?",
+        "answer": "Azure Cognitive Services are APIs, SDKs, and services available to help developers build intelligent applications without having direct AI or data science skills. <a href='https://azure.microsoft.com/en-us/services/cognitive-services/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 233,
+        "category": "Azure",
+        "question": "What is Azure Site Recovery?",
+        "answer": "Azure Site Recovery helps ensure business continuity by keeping business apps and workloads running during outages. It replicates workloads running on physical and virtual machines (VMs) from a primary site to a secondary location. <a href='https://azure.microsoft.com/en-us/services/site-recovery/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 234,
+        "category": "Azure",
+        "question": "What is Azure Monitor?",
+        "answer": "Azure Monitor is a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. It helps maximize the availability and performance of applications and services. <a href='https://azure.microsoft.com/en-us/services/monitor/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 235,
+        "category": "Azure",
+        "question": "What is Azure Marketplace's primary purpose?",
+        "answer": "The primary purpose of the Azure Marketplace is to provide an ecosystem where users can find, try, and buy software and services built on or for Azure. <a href='https://azure.microsoft.com/en-us/marketplace/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 236,
+        "category": "Azure",
+        "question": "What types of solutions can be found in the Azure Marketplace?",
+        "answer": "The Azure Marketplace offers a wide range of solutions, including virtual machines, APIs, SaaS applications, developer tools, and consulting services. <a href='https://azure.microsoft.com/en-us/marketplace/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 237,
+        "category": "Azure",
+        "question": "How can businesses benefit from using the Azure Marketplace?",
+        "answer": "Businesses can benefit from using the Azure Marketplace by accessing a diverse set of solutions to enhance their Azure infrastructure, quickly deploying pre-configured applications, and finding specialized services to meet their specific needs. <a href='https://azure.microsoft.com/en-us/marketplace/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 238,
+        "category": "Azure",
+        "question": "What is Azure Sentinel?",
+        "answer": "Azure Sentinel is a scalable, cloud-native security information and event management (SIEM) and security orchestration automated response (SOAR) solution that provides intelligent security analytics across the enterprise. <a href='https://azure.microsoft.com/en-us/services/azure-sentinel/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 239,
+        "category": "Azure",
+        "question": "What is Azure Data Factory?",
+        "answer": "Azure Data Factory is a cloud-based data integration service that allows you to create data-driven workflows for orchestrating and automating data movement and data transformation. <a href='https://azure.microsoft.com/en-us/services/data-factory/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 240,
+        "category": "Azure",
+        "question": "What is the Azure Marketplace Publisher Program?",
+        "answer": "The Azure Marketplace Publisher Program allows partners to list their solutions on the Azure Marketplace, providing them with opportunities to reach Azure customers and expand their business. <a href='https://partner.microsoft.com/en-us/solutions/azure/marketplace' target='_blank'>Learn more</a>"
+    },
+	{
+        "id": 301,
+        "category": "Algorithms",
+        "question": "What is an algorithm?",
+        "answer": "An algorithm is a step-by-step procedure or formula for solving a problem. It consists of a sequence of finite instructions to achieve a desired output. <a href='https://www.geeksforgeeks.org/introduction-to-algorithms/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 302,
+        "category": "Algorithms",
+        "question": "What is the difference between a greedy algorithm and a dynamic programming algorithm?",
+        "answer": "A greedy algorithm makes the locally optimal choice at each step with the hope of finding the global optimum. Dynamic programming solves problems by breaking them down into simpler subproblems and solving each of those subproblems just once, storing their solutions. <a href='https://www.geeksforgeeks.org/difference-between-greedy-method-and-dynamic-programming/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 303,
+        "category": "Algorithms",
+        "question": "What is a divide and conquer algorithm?",
+        "answer": "A divide and conquer algorithm works by recursively breaking down a problem into two or more subproblems of the same or related type until they become simple enough to be solved directly. The solutions to the subproblems are then combined to give a solution to the original problem. <a href='https://www.geeksforgeeks.org/divide-and-conquer-algorithm-introduction/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 304,
+        "category": "Algorithms",
+        "question": "What is a backtracking algorithm?",
+        "answer": "A backtracking algorithm is a recursive approach for solving problems by building a solution incrementally, removing those solutions that fail to satisfy the constraints of the problem at any point of time. <a href='https://www.geeksforgeeks.org/backtracking-algorithms/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 305,
+        "category": "Algorithms",
+        "question": "What is the difference between a breadth-first search (BFS) and a depth-first search (DFS)?",
+        "answer": "BFS explores all neighbors at the present depth prior to moving on to nodes at the next depth level, while DFS explores as far along a branch as possible before backtracking. <a href='https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/' target='_blank'>Learn more</a>"
+    },
+	 {
+        "id": 401,
+        "category": "Data Structures",
+        "question": "What is a data structure?",
+        "answer": "A data structure is a particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently. <a href='https://www.geeksforgeeks.org/data-structures/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 402,
+        "category": "Data Structures",
+        "question": "What is the difference between an array and a linked list?",
+        "answer": "An array is a collection of elements identified by index, stored in contiguous memory locations, whereas a linked list is a collection of nodes where each node contains data and a reference to the next node in the sequence. <a href='https://www.geeksforgeeks.org/difference-between-array-and-linked-list/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 403,
+        "category": "Data Structures",
+        "question": "What is a stack and how does it work?",
+        "answer": "A stack is a linear data structure that follows the LIFO (Last In, First Out) principle. Elements are added and removed from the top of the stack. <a href='https://www.geeksforgeeks.org/stack-data-structure/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 404,
+        "category": "Data Structures",
+        "question": "What is a queue and how does it work?",
+        "answer": "A queue is a linear data structure that follows the FIFO (First In, First Out) principle. Elements are added from the rear and removed from the front of the queue. <a href='https://www.geeksforgeeks.org/queue-data-structure/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 405,
+        "category": "Data Structures",
+        "question": "What is a binary tree?",
+        "answer": "A binary tree is a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child. <a href='https://www.geeksforgeeks.org/binary-tree-data-structure/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 406,
+        "category": "Data Structures",
+        "question": "What is a binary search tree (BST)?",
+        "answer": "A binary search tree is a binary tree in which all the nodes follow the property that all the left subtree nodes are less than the root and all the right subtree nodes are greater than the root. <a href='https://www.geeksforgeeks.org/binary-search-tree-data-structure/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 407,
+        "category": "Data Structures",
+        "question": "What is a hash table?",
+        "answer": "A hash table is a data structure that implements an associative array, a structure that can map keys to values. It uses a hash function to compute an index into an array of buckets from which the desired value can be found. <a href='https://www.geeksforgeeks.org/hashing-data-structure/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 408,
+        "category": "Data Structures",
+        "question": "What is a graph and how is it represented?",
+        "answer": "A graph is a data structure that consists of a finite set of nodes (vertices) and a set of edges connecting them. It can be represented using adjacency lists or adjacency matrices. <a href='https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/' target='_blank'>Learn more</a>"
+    },
+	{
+        "id": 501,
+        "category": "Complexity",
+        "question": "What is Big O notation?",
+        "answer": "Big O notation is a mathematical representation used to describe the upper bound of an algorithm's runtime or space requirements in terms of the size of the input data. <a href='https://www.geeksforgeeks.org/analysis-of-algorithms-set-4-analysis-of-loops/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 502,
+        "category": "Complexity",
+        "question": "What is the difference between time complexity and space complexity?",
+        "answer": "Time complexity refers to the amount of time an algorithm takes to complete, whereas space complexity refers to the amount of memory space an algorithm uses during its execution. <a href='https://www.geeksforgeeks.org/g-fact-86/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 503,
+        "category": "Complexity",
+        "question": "What is constant time complexity?",
+        "answer": "Constant time complexity, denoted as O(1), means that the algorithm's runtime does not depend on the size of the input data. <a href='https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 504,
+        "category": "Complexity",
+        "question": "What is linear time complexity?",
+        "answer": "Linear time complexity, denoted as O(n), means that the algorithm's runtime grows linearly with the size of the input data. <a href='https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 505,
+        "category": "Complexity",
+        "question": "What is logarithmic time complexity?",
+        "answer": "Logarithmic time complexity, denoted as O(log n), means that the algorithm's runtime grows logarithmically with the size of the input data. <a href='https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 506,
+        "category": "Complexity",
+        "question": "What is polynomial time complexity?",
+        "answer": "Polynomial time complexity, denoted as O(n^k), means that the algorithm's runtime grows polynomially with the size of the input data. <a href='https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 507,
+        "category": "Complexity",
+        "question": "What is exponential time complexity?",
+        "answer": "Exponential time complexity, denoted as O(2^n), means that the algorithm's runtime grows exponentially with the size of the input data. <a href='https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations/' target='_blank'>Learn more</a>"
+    },
+    {
+        "id": 508,
+        "category": "Complexity",
+        "question": "What is the difference between worst-case, average-case, and best-case time complexity?",
+        "answer": "Worst-case complexity refers to the maximum time an algorithm can take, average-case complexity refers to the expected time for a random input, and best-case complexity refers to the minimum time for the optimal input. <a href='https://www.geeksforgeeks.org/worst-average-and-best-case-analysis-of-algorithms/' target='_blank'>Learn more</a>"
     }
 ]

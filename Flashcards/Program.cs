@@ -27,6 +27,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Flashcards}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Categories}/{id?}");
 
 app.Run();
