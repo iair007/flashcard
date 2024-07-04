@@ -16,7 +16,7 @@
     <div id="categoryList">
         @foreach (var category in Model)
         {
-            <div>
+            <div class="category-row" onclick="toggleCheckbox(event)">
                 <input type="checkbox" name="selectedCategories" value="@category" /> @category
             </div>
         }
@@ -24,6 +24,9 @@
     <br />
     <button type="submit">Show Flashcards</button>
 </form>
+
+<!-- Link to the external CSS file -->
+<link href="~/css/categories.css" rel="stylesheet">
 
 @section Scripts {
     <script>
@@ -54,6 +57,13 @@
                 } else {
                     divs[i].style.display = "none";
                 }
+            }
+        }
+
+        function toggleCheckbox(event) {
+            if (event.target.tagName.toLowerCase() !== 'input') {
+                var checkbox = event.currentTarget.querySelector('input[type="checkbox"]');
+                checkbox.checked = !checkbox.checked;
             }
         }
     </script>

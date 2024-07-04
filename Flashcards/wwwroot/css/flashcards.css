@@ -1,6 +1,11 @@
 ﻿.flashcard-row {
     cursor: pointer;
+
 }
+
+    .flashcard-row:hover {
+        background-color: #f9f9f9;
+    }
 
 .flip-container {
     perspective: 1000px;

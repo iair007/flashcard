@@ -1,0 +1,63 @@
+﻿/* categories.css */
+.category-row {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+    .category-row:hover {
+        background-color: #f9f9f9;
+    }
+
+    .category-row input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+#searchBox {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #0d6efd;
+    border-radius: .25rem;
+    border-color: #0d6efd;
+    border: 1px solid;
+    color: white;
+    padding: .375rem .75rem;
+/*    padding: 15px 32px;*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+    }
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.start-from-id {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+    .start-from-id input {
+        width: 100px;
+        margin-left: 5px;
+    }
