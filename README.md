@@ -51,6 +51,7 @@ Flashcards App is a web application built with ASP.NET Core MVC for studying and
 
 ## Screenshots
 <p align="center">
+  <img src="Screenshots/Categories.PNG" alt="Categories List" width="400"/>
   <img src="Screenshots/table.PNG" alt="Flashcards Table" width="400"/>
   <img src="Screenshots/modal.PNG" alt="Flashcard Modal" width="400"/>
 </p>
